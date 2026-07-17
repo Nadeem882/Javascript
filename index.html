@@ -45,6 +45,36 @@
             let sym2 = Symbol("Javascript");
             console.log("these two strings value are same:",sym1==sym2);
 
+            //type of variable (it identifies the variablr type)
+            let str = "Nadeem";
+            let num = 7;
+            let bool = true;
+            let udef = undefined;
+            let symol = Symbol("one");
+
+            console.log(typeof str);
+            console.log(typeof num);
+            console.log(typeof bool);
+            console.log(typeof udef);
+            console.log(typeof symol);
+
+            //convert data types
+            let NUMtoSTR = 6;
+            NUMtoSTR=String(NUMtoSTR);
+            console.log(NUMtoSTR,typeof NUMtoSTR);
+
+            let STRtoNUM = "1342";
+            STRtoNUM=Number(STRtoNUM);
+            console.log(STRtoNUM,typeof STRtoNUM);
+
+            let STRtoBOL = "NADEEM";
+            STRtoBOL=Boolean(STRtoBOL);
+            console.log(STRtoBOL,typeof STRtoBOL);
+
+            let nr1 = 2;
+            let nr2 = "2";
+            console.log(nr1 + Number(nr2));
+            
         </script>    
     </body>
 </html>
