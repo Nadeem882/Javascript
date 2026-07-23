@@ -138,6 +138,51 @@
                 nr2--;
                 console.log(nr2); = 3
             }
+            {
+                // Get the values of the two sides from the user
+                let a = Number(prompt("Enter the length of side a:"));
+                let b = Number(prompt("Enter the length of side b:"));
+                
+                // Calculate the hypotenuse
+                let c = Math.sqrt((a * a) + (b * b));
+                
+                // Print the answer to the console
+                console.log("The hypotenuse is: " + c);
+            }
+            // assign operators
+            let a = 10;
+            let b = 5;
+            let c = 3;
+            a += b;
+            a /= c;
+            c %= b;
+            console.log("a =", a);
+            console.log("b =", b);
+            console.log("c =", c);
+            //comparsion
+            let x = 5;
+            let y = "5";
+            console.log(x == y);
+            console.log(x === y);
+            console.log(x != y);
+            let x = 5;
+            let y = 6;
+            console.log(y > x);
+            console.log(y < x);
+            console.log(y >= x);
+            console.log(y <= x);
+            //logical
+            let x = 1;
+            let y = 2;
+            let z = 3;
+            console.log(x < y && y < z);
+            console.log(x > y && y < z);
+            console.log(x > y || y < z);
+            let x = false;
+            console.log(!x);
+            let x = 1;
+            let y = 2;
+            console.log(!(x < y));
         </script>    
     </body>
 </html>
