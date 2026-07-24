@@ -1,7 +1,7 @@
 <html>
   <body>
     <script>
-    /*Miles-to-kilometers converter
+    /*chp 2 Miles-to-kilometers converter
     Create a variable that contains a value in miles, convert it to kilometers, and log the 
     value in kilometers in the following format:
     */
@@ -9,6 +9,28 @@
     let kilo = Number(prompt("Enter the number"));
     let ans = kilo * mile;
     document.write("The distance of ",kilo," is equal to",ans," miles.");
+
+    /*BMI calculator
+Set values for height in inches and weight in pounds, then convert the values to 
+centimeters and kilos, outputting the results to the console:
+• 1 inch is equal to 2.54 cm
+• 2.2046 pounds is equal to 1 kilo
+Output the results. Then, calculate and log the BMI: this is equal to weight (in kilos) 
+divided by squared height (in meters). Output the results to the console.*/
+      // Set height (in inches) and weight (in pounds)
+    let heightInches = 70;
+    let weightPounds = 160;
+      
+    let heightCm = heightInches * 2.54;
+    let weightKg = weightPounds / 2.2046;
+    
+    let heightMeters = heightCm / 100;
+    
+    let bmi = weightKg / (heightMeters * heightMeters);
+    console.log("Height in centimeters:", heightCm);
+    console.log("Weight in kilograms:", weightKg);
+    console.log("BMI:", bmi);
+      
     </script>
   </body>
 </html>
