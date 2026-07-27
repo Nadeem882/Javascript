@@ -300,7 +300,35 @@ delete starting at our previously defined starting index.*/
                 } else if(age >= 65) {
                 console.log("A ticket is 7 dollars.");
                 }
+
+                practise 4.2
+                let age=prompt("Enter the age :");
+                age=Number(age);
+                let message;
+                if(age>=21) {
+                    message="You are allowed to enter the venue and purchase alcohol.";
+                }
+                else if (age >= 19) {
+                    message = "You are allowed to enter the venue, but you cannot purchase alcohol.";
+                }
+                else {
+                    message = "You are not allowed to enter the venue.";
+                }
+                console.log(message);
+
+               // Conditional ternary operators
+                let ID = false;
+                let message=ID ? "you are allowed in venue"
+                : "you are not allowed in venue"; 
+                console.log(message); == : "you are not allowed in venue"; 
+
+                let ID = true;
+                let message=ID ? "you are allowed in venue"
+                : "you are not allowed in venue"; 
+                console.log(message); == you are allowed in venue"
+
             }
+            
         </script>    
     </body>
 </html>
