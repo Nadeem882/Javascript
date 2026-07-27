@@ -68,6 +68,83 @@ friend's first names, last names, and an ID value.
 3. Add the three friends to the friend array.
 4. Output it to the console */
 
+      // 1. Create an object with an empty friends array
+let people = {
+  friends: []
+};
+// 2. Create three friend objects
+let friend1 = {
+  firstName: "John",
+  lastName: "Smith",
+  id: 101
+};
+let friend2 = {
+  firstName: "Emma",
+  lastName: "Johnson",
+  id: 102
+};
+let friend3 = {
+  firstName: "Michael",
+  lastName: "Brown",
+  id: 103
+};
+// 3. Add the friends to the friends array
+people.friends.push(friend1);
+people.friends.push(friend2);
+people.friends.push(friend3);
+
+console.log(people);
+
+    /*   we'll create a Magic 8-Ball random answer generator:
+1. Start by setting a variable that gets a random value assigned to it. The value 
+is assigned by generating a random number 0-5, for 6 possible results. You 
+can increase this number as you add more results.
+2. Create a prompt that can get a string value input from a user that you can 
+repeat back in the final output.
+3. Create 6 responses using the switch statement, each assigned to a different 
+value from the random number generator.   
+4. Create a variable to hold the end response, which should be a sentence 
+printed for the user. You can assign different string values for each case, 
+assigning new values depending on the results from the random value.
+5. Output the user's original question, plus the randomly selected case 
+response, to the console after the user enters their question.  */
+
+ // 1. Generate a random number from 0 to 5
+let randomNumber = Math.floor(Math.random() * 6);
+let question = prompt("Ask the Magic 8-Ball a question:");
+// 3 & 4. Create a variable to hold the response
+let answer;
+switch (randomNumber) {
+  case 0:
+    answer = "Yes, definitely.";
+    break;
+
+  case 1:
+    answer = "No, not at all.";
+    break;
+
+  case 2:
+    answer = "Maybe. Try again later.";
+    break;
+
+  case 3:
+    answer = "Without a doubt.";
+    break;
+
+  case 4:
+    answer = "It is very unlikely.";
+    break;
+
+  case 5:
+    answer = "The outlook is good.";
+    break;
+
+  default:
+    answer = "Cannot predict now.";
+}
+console.log("Your Question: " + question);
+console.log("Magic 8-Ball Says: " + answer);
+
       
       
     </script>
