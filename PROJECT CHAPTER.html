@@ -206,6 +206,39 @@ switch (name) {
   default:
     console.log("I don't know this person.");
 }
+
+  /*    Rock Paper Scissors game
+This is a game between a player and the computer, where both will make a random 
+selection of either Rock, Paper, or Scissors (alternatively, you could create a version 
+using real player input!). Rock will beat out Scissors, Paper will beat out Rock, and 
+Scissors will beat out Paper. You can use JavaScript to create your own version of 
+this game, applying the logic with an if statement. Since this project is a little more 
+difficult, here are some suggested steps: */
+
+let choices = ["Rock", "Paper", "Scissors"];
+// 2. Generate random choices for the player and the computer
+let player = Math.floor(Math.random() * 3);
+let computer = Math.floor(Math.random() * 3);
+let result = "";
+
+// 4. Check if it's a tie
+if (player === computer) {
+    result = "It's a tie!";
+} 
+// 5. Apply the game logic
+else if (
+    (player === 0 && computer === 2) || // Rock beats Scissors
+    (player === 1 && computer === 0) || // Paper beats Rock
+    (player === 2 && computer === 1)    // Scissors beats Paper
+) {
+    result = "Player wins!";
+} 
+else {
+    result = "Computer wins!";
+}
+console.log("Player chose: " + choices[player]);
+console.log("Computer chose: " + choices[computer]);
+console.log(result);
       
     </script>
   </body>
