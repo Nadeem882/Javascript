@@ -1,1 +1,49 @@
+<html>
+  <body>
+    <script>
 
+      //while loops
+      
+      let i = 0;
+      while (i < 10) {
+      console.log(i);
+        i++;
+      }
+
+      let nr1 = 0;
+      let nr2 = 1;
+      let temp;
+      let fibonacciArray = [];
+      while (fibonacciArray.length < 25) {
+        fibonacciArray.push(nr1);
+        temp = nr1 + nr2;
+        nr1 = nr2;
+        nr2  = temp;  
+        console.log(nr1);
+      }
+
+      //do while
+
+      let number;
+      do {
+        number = prompt("Please enter a number between 0 and 100: ");
+      } while (!(number >= 0 && number < 100));
+
+      practise ex5.2
+      // 1. Set the starting counter to 0
+      let counter = 0;
+      
+      // 2. Create a step variable
+      let step = 10;
+      
+      // 3. Use a do...while loop
+      do {
+          console.log(counter);
+          counter += step;
+      } while (counter <= 100);
+
+      
+      
+    </script>
+  </body>
+</html>
