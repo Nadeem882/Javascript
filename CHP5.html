@@ -42,7 +42,58 @@
           counter += step;
       } while (counter <= 100);
 
+      //for loops
+      let arr = [];
+      for (let i = 0; i < 100; i+=2) {
+        arr.push(i);
+      }
+      console.log(arr);
+
+      practise ex 5.3
+      let myWork = [];
+      for (let i = 1; i <= 10; i++) {
+          // 3. Alternate true/false using a ternary operator
+          let status = (i % 2 === 0) ? false : true;
+          // 4. Create a temporary lesson object
+          let lesson = {
+              name: "Lesson " + i,
+              status: status
+          };
+          // 5. Add the object to the array
+          myWork.push(lesson);
+      }
+      console.log(myWork);
+
+      //nested loops
+      let arrOfArrays = [];
+      for (let i = 0; i < 3; i++){
+        arrOfArrays.push([]);
+        for (let j = 0; j < 7; j++) {
+          arrOfArrays[i].push(j);
+        }
+      }
+      console.log(arrOfArrays);
+
       
+      let myTable = [];
+      
+      let rows = 4;
+      let cols = 3;
+      let counter = 0;
+      for (let i = 0; i < rows; i++) {
+      
+          // Temporary array for each row
+          let tempTable = [];
+      
+          // 5. Create columns
+          for (let j = 0; j < cols; j++) {
+              counter++;
+              tempTable.push(counter);
+          }
+          // Add the completed row to the table
+          myTable.push(tempTable);
+      }
+      console.table(myTable);
       
     </script>
   </body>
