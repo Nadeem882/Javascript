@@ -94,7 +94,49 @@
           myTable.push(tempTable);
       }
       console.table(myTable);
+
+      //loop and array
+
+      let names = ["Chantal", "John", "Maxime", "Bobbi", "Jair"]; 
+      for (let i = 0; i < names.length; i ++){ 
+        if(names[i].startsWith("M")){
+          delete names[i];
+          continue;
+        }
+        names[i] = "hello " + names[i]; 
+      } 
+      console.log(names);
+
+      practise ex 5.5
+      let grid = [];
+
+      let cells = 64;
+      let cols = 8;
+      let counter = 0;
+      let row;
       
+      // 5. Loop through all cells (+1 to include 0)
+      for (let i = 0; i < cells + 1; i++) {
+      
+          // 6. Check if the counter is divisible by the number of columns
+          if (counter % cols === 0) {
+      
+              // 7. If the row already exists, add it to the grid
+              if (row !== undefined) {
+                  grid.push(row);
+              }
+      
+              // 8. Start a new row
+              row = [];
+          }
+          counter++;
+          row.push(counter);      
+          // 11. Add the final row when the counter reaches the total cells
+          if (counter === cells) {
+              grid.push(row);
+          }
+      }
+      console.log(grid);
     </script>
   </body>
 </html>
