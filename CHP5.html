@@ -168,7 +168,7 @@
           console.log(arr2[i]);
       }
 
-      //break and continue
+      //break 
 
       let cars = [
           {
@@ -204,6 +204,33 @@
             }
           }
         }
+
+      //countinue
+      let i = 1;
+      while (i < 50) {
+        i++;
+        if ((i-1) % 2 === 0){
+          continue;
+        }
+        console.log(i-1);
+      }
+
+      practise ex 5.8
+      let output = "";
+      let skipNumber = 5;
+      
+      // 3. Create a for loop
+      for (let i = 1; i <= 10; i++) {
+          if (i === skipNumber) {
+      
+              // 5. Skip this iteration
+              continue;
+          }
+      
+          // 6. Append the current number to the output string
+          output += i + " ";
+      }
+      console.log(output);
         </script>
   </body>
 </html>
