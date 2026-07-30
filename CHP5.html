@@ -137,6 +137,73 @@
           }
       }
       console.log(grid);
-    </script>
+
+      
+      //for of loop
+      
+     let arr=[];
+    for(i=0;i<10;i++) {
+        arr.push(i);
+            } 
+    console.log(arr);
+    for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+    }
+    for (let value of arr) {
+        console.log(value);
+    }
+      //for in loop
+
+      let arr={
+          first:"nadeem",
+          middle:"wahid",
+          last:"choudhary"
+      };
+      for (let value in arr) {
+          console.log(value+":"+arr[value]);
+      }
+      console.log("array values");
+      let arr2=["nadeem","wahid","choudhary"];
+      for(i=0;i<arr2.length;i++) {
+          console.log(arr2[i]);
+      }
+
+      //break and continue
+
+      let cars = [
+          {
+            model: "Golf",
+            make: "Volkswagen",
+            year: 1999,
+            color: "black",
+          },
+          {
+            model: "Picanto",
+            make: "Kia",
+            year: 2020,
+            color: "red",
+          },
+          {
+            model: "Peugeot",
+            make: "208",
+            year: 2021,
+            color: "black",
+          },
+          {
+            model: "Fiat",
+            make: "Punto",
+            year: 2020,
+            color: "black",
+          }
+        ];
+        for (let i = 0; i < cars.length; i++) {
+        if (cars[i].year >= 2020) {
+        if (cars[i].color === "black") {
+        console.log("I have found my new car:", cars[i]);
+        break;
+            }
+          }
+        }
+        </script>
   </body>
 </html>
