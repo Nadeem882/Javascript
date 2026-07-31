@@ -231,6 +231,42 @@
           output += i + " ";
       }
       console.log(output);
-        </script>
+
+      CHP 6 FUNCTIONS
+      practise ex6.1
+
+      let Nad=function(num1,num2) {
+          return num1+num2;
+      }
+      let a=10;
+      let b=20;
+      
+      let res=Nad(a,b);
+      console.log(res," Result")
+      
+      let result2 = Nad(15, 25);
+      console.log("Result 2:", result2);
+
+      practise ex 6.2
+
+      // 1. Create an array of descriptive words
+      let descriptions = [
+          "Amazing",
+          "Brilliant",
+          "Creative",
+          "Friendly",
+      ];
+      // 2. Create a function
+      function describePerson() {
+          let name = prompt("Enter your name:");
+          // 3. Select a random description
+          let randomIndex = Math.floor(Math.random() * descriptions.length);
+          let description = descriptions[randomIndex];
+          console.log(name + " is " + description + "!");
+      }
+      describePerson();
+
+      
+    </script>
   </body>
 </html>
