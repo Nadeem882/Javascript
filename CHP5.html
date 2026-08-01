@@ -266,6 +266,52 @@
       }
       describePerson();
 
+      //Parameters and arguments
+      practise ex 6.3
+      
+      let num1 = 15;
+      let num2 = 5;
+      let ope = "+";
+      function calculate(a, b, op) {
+          if (op === "+") {
+              return a + b;
+          } else if (op === "-") {
+              return a - b;
+          } else {
+              return a + b;
+          }
+      }
+      console.log(calculate(num1, num2, ope));
+      ope = "-";
+      console.log(calculate(num1, num2, ope));
+
+      //Default or unsuitable parameters
+      
+      function addTwoNumbers(x = 2, y = 3) {
+      console.log(x + y);
+      }
+      addTwoNumbers();
+      addTwoNumbers(6, 6);
+      addTwoNumbers(10);
+      The output will be:
+      5
+      12
+      13
+
+      //Arrow functions
+      let addTwoNumbers = (x, y) => console.log(x + y);
+      addTwoNumbers(5,5); == op 10
+
+      let sayHi = () => console.log("hi");
+      sayHi(); == op hi
+
+      const arr = ["squirrel", "alpaca", "buddy"];
+      arr.forEach(e => console.log(e));
+      outputs:
+      squirrel
+      alpaca
+      buddy
+
       
     </script>
   </body>
