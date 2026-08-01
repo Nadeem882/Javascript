@@ -312,7 +312,95 @@
       alpaca
       buddy
 
+      //spread operator
+      function addFourNumbers(x, y, z, a) { 
+        console.log(x + y + z + a); 
+      } 
+      let arr = [5, 9];
+      let arr2 = [6, 7];
+      addFourNumbers(...arr, ...arr2);
+      This will output 27 to the console, calling the function like this:
+      addFourNumbers(5, 9, 6, 7);
+
+      //returning value functions
+
+      practise ex 6.4
+      let results = [];
       
+      // 3. Create a function to add two numbers
+      function calculate(num1, num2) {
+          return num1 + num2;
+      }
+      
+      // 2. Create a loop that runs 10 times
+      for (let i = 0; i < 10; i++) {
+      
+          // First value: loop counter × 5
+          let value1 = i * 5;
+      
+          // Second value: loop counter × itself
+          let value2 = i * i;
+      
+          // 4. Call the function
+          let response = calculate(value1, value2);
+      
+          // 5. Store the result in the array
+          results.push(response);
+      }
+      console.log(results);
+
+      //local variables
+      function testAvailability() {
+        let y = "I'll return";
+        console.log("Available here:", y);
+        return y;
+      }
+      let z = testAvailability();
+      console.log("Outside the function:", z);
+      console.log("Not available here:", y);
+output:
+      Available here: I'll return
+      Outside the function: I'll return
+      ReferenceError: y is not define
+
+      function doingStuff() { 
+      if (true) { 
+      console.log(x);
+      let x = "local"; 
+        } 
+      }
+      doingStuff(); == this will error ReferenceError that x is not initialized
+
+      function doingStuff() { 
+      if (true) { 
+      console.log(x);
+      var x = "local";
+        }
+      }
+      doingStuff();
+
+       function doingStuff() { 
+      if (true) { 
+      console.log(x);
+      const x = "local"; 
+        } 
+      }
+      doingStuff(); == this will error ReferenceError that x is not defined
+
+      //global variables
+      let x = "global";
+      function doingStuff() {
+        let x = "local";
+        console.log(x);
+      }
+      doingStuff();
+      console.log(x);
+      This will output:
+      local
+      global
+
+      
+
     </script>
   </body>
 </html>
