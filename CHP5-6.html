@@ -399,6 +399,41 @@ output:
       local
       global
 
+      //Recursive functions
+      practise ex 6.6
+            // 1 & 2. Create a recursive factorial function
+      function factorial(num) {
+          // Display the current value
+          console.log("Current value:", num);
+          // Base case
+          if (num === 0) {
+              return 1;
+          }
+          // Recursive case
+          return num * factorial(num - 1);
+      }
+      // 3. Invoke the function
+      let number = 5;
+      let result = factorial(number);
+      // Output the result
+      console.log("Factorial of", number, "is", result);
+
+              // 1. Create a function expression
+        let printMessage = function(message) {
+            console.log(message);
+        };
+        
+        // 2. Pass an argument into the function
+        printMessage("Hello from the function expression!");
+        
+        // 3. Create the same function as a function declaration
+        function printMessage2(message) {
+            console.log(message);
+        }
+        
+        // Call the function declaration
+        printMessage2("Hello from the function declaration!");
+
       
 
     </script>
