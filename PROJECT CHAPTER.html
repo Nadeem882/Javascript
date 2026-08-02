@@ -278,8 +278,69 @@ calculations. */
     }
     console.log(multiplicationTable);
 
+    /*  Create a recursive function
+Create a recursive function that counts up to 10. Invoke the function with different 
+start numbers as the arguments that are passed into the function. The function 
+should run until the value is greater than 10. */
+
+      function countUp(num) {
+          console.log(num);
+          if (num >= 10) {
+              return;
+          }
+          countUp(num + 1);
+      }
+      countUp(1);
+      console.log("-----");
+      countUp(5);
+
+     /*Set timeout order
+Use the arrow format to create functions that output the values one and two to the 
+console. Create a third function that outputs the value three to the console, and then 
+invokes the first two functions.
+Create a fourth function that outputs the word four to the console and also use 
+setTimeout() to invoke the first function immediately and then the third function */  
+
+      function func1() {
+        console.log("ONE");
+    }
+    function func2() {
+        console.log("TWO");
+    }
+    function func3() {
+        console.log("THREE");
+        func1();
+        func2()
+    }
+    function func4() {
+        console.log("FOUR");
+        func3();
+        setTimeout(func1, 0);
+    }
+    func4();
+
+      another way :
+
+      const one = () => {
+          console.log("One");
+      };
+      const two = () => {
+          console.log("Two");
+      };
+      const three = () => {
+          console.log("Three");
+          one();
+          two();
+      };
+      const four = () => {
+          console.log("Four");
+          setTimeout(one, 0);
+          three();
+      };
+      four();
+
       
-      
+
     </script>
   </body>
 </html>
