@@ -1,1 +1,62 @@
+<html>
+  <head>
+    CLASSES AND OBJECTS
+  </head>
+    <script>
 
+      //CLASS and OBJECTS
+      class ClassName {
+      constructor(prop1, prop2) {
+      this.prop1 = prop1;
+          this.prop2 = prop2;
+        }
+      }
+ 
+      let obj = new ClassName("arg1", "arg2");
+
+      class Dog {
+        constructor(dogName, weight, color, breed) {
+          this.dogName = dogName;
+          this.weight = weight;
+          this.color = color;
+          this.breed = breed;
+        }
+      }
+      let dog = new Dog("JavaScript", 2.4, "brown", "chihuahua");
+
+      practice ex 7.1
+
+       class Person{
+          constructor(first,last) {
+              this.first=firstname;
+              this.last=lastname;
+          }
+      }
+      let friend1 = new Person("nadeem", "khan");
+      let friend2 = new Person("sairaj", "bhaoir");
+      console.log("Hello, " + friend1.firstName + " " + friend1.lastName + "!");
+      console.log("Hello, " + friend2.firstName + " " + friend2.lastName + "!");
+
+      //methods
+        class Person {
+        constructor(firstname, lastname) {
+          this.firstname = firstname;
+          this.lastname = lastname;
+        }
+        greet() {
+          console.log("Hi there!", this.firstname);
+        }
+        compliment(name, object) {
+          return "That's a wonderful " + object + ", " + name;
+        }
+      }
+      let p = new Person("Nadeem","Choudhary");//created ob for class same for constructor
+      p.greet();
+      console.log(p.compliment("John", "car"));//call method
+
+      practice ex 
+
+
+
+    </script>
+</html>
