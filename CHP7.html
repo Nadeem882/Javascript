@@ -26,16 +26,16 @@
 
       practice ex 7.1
 
-       class Person{
+      class Person{
           constructor(first,last) {
-              this.first=firstname;
-              this.last=lastname;
+              this.firstname=first;
+              this.lastname=last;
           }
       }
       let friend1 = new Person("nadeem", "khan");
       let friend2 = new Person("sairaj", "bhaoir");
-      console.log("Hello, " + friend1.firstName + " " + friend1.lastName + "!");
-      console.log("Hello, " + friend2.firstName + " " + friend2.lastName + "!");
+      console.log("Hello, " + friend1.firstname + " " + friend1.lastname + "!");
+      console.log("Hello, " + friend2.firstname + " " + friend2.lastname + "!");
 
       //methods
         class Person {
@@ -54,9 +54,124 @@
       p.greet();
       console.log(p.compliment("John", "car"));//call method
 
-      practice ex 
+      practice ex 7.2
 
+      class Person {
+          constructor(first, last) {
+              this.firstname = first;
+              this.lastname = last;
+          }
+      
+          fullname() {
+              return this.firstname + " " + this.lastname;
+          }
+      }
+      
+      let friend1 = new Person("Nadeem", "Khan");
+      let friend2 = new Person("Sairaj", "Bhoir");
+      
+      console.log("Hello:", friend1.fullname());
+      console.log("Hello:", friend2.fullname());
 
+      //properties :This is how to add properties that aren't accessible from outside. We prefix them with a # symbol:
+
+      class Person {
+        #firstname;
+        #lastname;
+        constructor(firstname, lastname) {
+          this.#firstname = firstname;
+          this.#lastname = lastname;
+        }
+      }
+      let p = new Person("Maria", "Saga");
+      console.log(p.firstname);
+    //  Right now, the firstname and lastname properties cannot be accessed from outside 
+//the class. This is done by adding # in front of the property. If we try it: We'll get: undefined
+
+      //Getters and setters
+
+      class Person {
+      #firstname;
+      #lastname;
+      constructor(firstname, lastname) {
+        this.#firstname = firstname;
+        this.#lastname = lastname;
+      }
+      get firstname() {
+        return this.#firstname;
+      }
+      set firstname(firstname) {
+        this.#firstname = firstname;
+      }
+      get lastname() {
+        return this.#lastname;
+      }
+      set lastname(lastname) {
+        this.#lastname = lastname;
+      }
+    }
+    let p = new Person("Maria", "Saga");
+    console.log(p.firstname); == Maria
+
+    //Inheritance
+      {
+      class Vehicle {
+    constructor(color, currentSpeed, maxSpeed) {
+    this.color = color;
+    this.currentSpeed = currentSpeed;
+    this.maxSpeed = maxSpeed;
+      }
+      move() {
+        console.log("moving at", this.currentSpeed);
+      }
+      accelerate(amount) {
+        this.currentSpeed += amount;
+      }
+    }
+      class Motorcycle extends Vehicle {
+      constructor(color, currentSpeed, maxSpeed, fuel) {
+        super(color, currentSpeed, maxSpeed);
+        this.fuel = fuel;
+      }
+      doWheelie() {
+        console.log("Driving on one wheel!");
+       }
+    }
+      let motor = new Motorcycle("Black", 0, 250, "gasoline");
+      console.log(motor.color);
+      motor.accelerate(50);
+      motor.move();
+      }
+
+      practice ex 7.3
+      {
+    class Animal {
+        constructor(species, sound) {
+            this.species = species;
+            this.sound = sound;
+        }
+        makeSound() {
+            console.log(`${this.species} says "${this.sound}"`);
+        }
+    }
+    
+    // 2. Add a prototype method
+    Animal.prototype.action = function () {
+        console.log(`${this.species} is running.`);
+    };
+    
+    // Create two animals
+    let dog = new Animal("Dog", "Woof");
+    let cat = new Animal("Cat", "Meow");
+    dog.makeSound();
+    cat.makeSound();
+    
+    dog.action();
+    cat.action();
+    
+    console.log(dog);
+    console.log(cat);
+      }
 
     </script>
 </html>
