@@ -382,38 +382,31 @@ many of each item the user selects.
 5. Create two or three objects with different combinations of menu selections, 
 and output the total cost in the console. */
       
-      // 1. Create a class with private fields
-class Menu {
-    #burgerPrice = 120;
-    #pizzaPrice = 250;
-
-    // 2. Constructor
-    constructor(burgers, pizzas) {
-        this.burgers = burgers;
-        this.pizzas = pizzas;
-    }
-
-    // 3. Method to calculate the total cost
-    calculateTotal() {
-        return (this.burgers * this.#burgerPrice) +
-               (this.pizzas * this.#pizzaPrice);
-    }
-
-    // 4. Getter to return the total cost
-    get totalCost() {
-        return this.calculateTotal();
-    }
-}
-
-// 5. Create objects with different orders
-let order1 = new Menu(2, 1); // 2 burgers, 1 pizza
-let order2 = new Menu(1, 3); // 1 burger, 3 pizzas
-let order3 = new Menu(4, 2); // 4 burgers, 2 pizzas
-
-// Output the total cost
-console.log("Order 1 Total: ₹" + order1.totalCost);
-console.log("Order 2 Total: ₹" + order2.totalCost);
-console.log("Order 3 Total: ₹" + order3.totalCost);
+      // Create a class with private fields
+      class Menu {
+          #burgerPrice = 120;
+          #pizzaPrice = 250;
+          constructor(burgers, pizzas) {
+              this.burgers = burgers;
+              this.pizzas = pizzas;
+          }
+          calculateTotal() {
+              return (this.burgers * this.#burgerPrice) +
+                     (this.pizzas * this.#pizzaPrice);
+          }
+      
+          // Getter to return the total cost
+          get totalCost() {
+              return this.calculateTotal();
+          }
+      }
+      let order1 = new Menu(2, 1); // 2 burgers, 1 pizza
+      let order2 = new Menu(1, 3); // 1 burger, 3 pizzas
+      let order3 = new Menu(4, 2); // 4 burgers, 2 pizzas
+      
+      console.log("Order 1 Total: ₹" + order1.totalCost);
+      console.log("Order 2 Total: ₹" + order2.totalCost);
+      console.log("Order 3 Total: ₹" + order3.totalCost);
 
     </script>
   </body>
